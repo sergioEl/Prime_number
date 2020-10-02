@@ -1,2 +1,2 @@
 # Prime_number
-Finding 100 prime numbers
+Finding and printing first 100 prime numbers.

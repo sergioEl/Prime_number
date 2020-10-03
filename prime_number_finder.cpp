@@ -3,7 +3,14 @@
 Seokho Han 201761541
 COMP2510 ass1
 
-Find 100 prime numbers and stroe the numbers in a vector.
+Finding first 100 prime numbers and store the numbers in a vector.
+*/
+
+/*
+As for prime number, if we found that the number has a factor(any one factor) except 1 and the number itself, 
+then that number is not prime, so we can reduce time complexity to O(sqrt(n)) from O(n).
+This approach is called primality test.
+Further it can be optimized in O(1) using Seive of Eratosthenes.
 */
 int main()
 {
@@ -13,7 +20,8 @@ int main()
     while (counter < 100)
     {
         pCount = 0;
-        for (int i = 2; i <= num/2 ; i++)
+        //So we will iterate till sqrt(n), so i<=sqrt(num)  OR   i*i<=num (squaring both sides;
+        for (int i = 2; i*i <= num ; i++)                
         {
             if (num % i == 0) //check if it's only divisible by itselt and 1
             {
